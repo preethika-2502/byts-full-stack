@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addition</title>
+    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.roqAZ2NZ2rnguBpwdLWgFQHaG8?w=229&h=215&c=7&r=0&o=5&dpr=1.3&pid=1.7" type="image/x-icon">
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b7f54c79722289.5ccbece3c1239.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color:rgb(0, 195, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    section {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
+
+    label {
+        font-weight: 600;
+        color: #3f345e;
+    }
+
+    input[type="number"] {
+        padding: 10px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-top: 5px;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background: #34d5db;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    button:hover {
+        background: #2980b9;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+        color: #2d3436;
+    }
+</style>
+</head>
+<body>
+    <center/>
+        <section>
+        <h1 > Addition</h1>
+    <label for="number">Enter the Value a:</label>
+    <input type="number" name="num1" id="num1">
+    <br/>
+    <br/>
+    <label for="number">Enter the Value b:</label>
+    <input type="number" name="num2" id="num2">
+    <br/>
+    <br/>
+    <button onclick="fn()">Add</button>
+    <p id="res"></p>
+    <br/>
+    <hr>
+    <h1> Subraction</h1>
+    <label for="number">Enter the value of a:</label>
+    <input type="number" name="num3" id="num3">
+    <br/>
+    <br/>
+    <label for="number">Enter the value of b:</label>
+    <input type="number" name="num4" id="num4">
+    <br/>
+    <br>
+    <button onclick="fn2()">Sub</button>
+    <p id="res1"></p>
+    </section>
+    <script>
+        function fn(){
+            a=document.getElementById("num1").value;
+            b=document.getElementById("num2").value;
+            c=Number(a)+Number(b);
+            document.getElementById("res").innerText = `Addition of two values: ${c}`;
+        }
+        function fn2(){
+            a=document.getElementById("num3").value;
+            b=document.getElementById("num4").value;
+            c=Number(a)-Number(b);
+            d=document.getElementById("res1");
+            d.innerText=`Subraction of two values is ${c}`;
+        }
+    </script>
+</body>
+</html>

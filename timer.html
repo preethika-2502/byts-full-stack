@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="shortcut icon" href="https://www.creativefabrica.com/wp-content/uploads/2018/11/Clock-timer-logo-by-Mansel-Brist-1.jpg" type="image/x-icon">
+    <style>
+    fieldset {
+    margin:150px auto;
+    max-width:300px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    height: fit-content;
+    width: fit-content;
+    padding: 70px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  button{
+    height: 30px;
+    width: 70px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #34bfdba9;
+    color: white;
+    cursor: pointer;
+  }
+  body{
+    margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url(https://cdn.dribbble.com/users/1162077/screenshots/5427775/timer-animation.gif);
+        color:rgb(0, 195, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+  }
+</style>
+</head>
+<body>
+    <fieldset>
+    <center>
+    <link rel="stylesheet" href="./timer.html">
+    <h2>Timer</h2>
+    <P id="count"> COUNT</P>
+    <button onclick="start()"> Start</button>
+    <button onclick="stop()"> Stop </button>
+    <button onclick="reset()"> Reset</button>
+    <script>
+        let count=0;
+        let intervalId;
+        function start(){
+            intervalId=setInterval(() => {
+                document.getElementById("count").innerText=++count;
+            }, 1000);
+        }
+        function stop(){
+            clearInterval(intervalId);
+        }
+        function reset(){
+            clearInterval(intervalId);
+            count=0;
+            document.getElementById('count').innerText=count;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Website</title>
+  <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.0w7f2vrD7gsPwd-VCBzLtwHaJZ?w=153&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      color: #333;
+    }
+
+    header {
+      background-color: #4db6ac;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header img {
+      height: 50px;
+      border-radius: 8px;
+    }
+
+    header h5 {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 2rem;
+      gap: 2rem;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #00796b;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #004d40;
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .hero img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .hero h1 {
+      margin: 1.5rem 0 0.5rem;
+      font-size: 2.5rem;
+      color: #00695c;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #444;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .center-image {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 250px;
+      z-index: 1000;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(-10px); }
+      100% { transform: translateX(-50%) translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://img.freepik.com/free-vector/children-readi…e-background_1308-99595.jpg?semt=ais_hybrid&w=740" alt="Learn">
+    <h5>Welcome to My Task!!</h5>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="./addition.html">Addition</a></li>
+      <li><a href="./converter.html">Conversion</a></li>
+      <li><a href="./calculator.html">Calculator</a></li>
+      <li><a href="./timer.html">Timer</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <img src="https://cdn.dribbble.com/users/4241563/screenshots/11874468/lottie-santi-daksa-project03.gif" alt="Learning Animation" />
+    <h1>Start Your Learning Journey!</h1>
+    <p>Explore our fun and interactive tools for learning math and time management. Easy, engaging, and educational!</p>
+  </section>
+
+</body>
+</html>

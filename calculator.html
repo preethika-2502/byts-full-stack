@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="shortcut icon" href="https://static.vecteezy.com/system/resources/previews/018/972/682/original/calculator-3d-application-icon-png.png" type="image/x-icon">
+      <style>
+  body {
+    margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url(https://media.giphy.com/media/nS7HC4nVwA8Xm/giphy.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color:rgb(0, 195, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+  }
+
+  fieldset {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  #display {
+    width: 300px;
+    height: 35px;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: right;
+    margin-bottom: 15px;
+  }
+
+  button {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #346edba9;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #29b9b665;
+  }
+
+  section {
+    margin-top: 10px;
+  }
+    </style>
+  </head>
+<body>
+  <fieldset>
+    <link rel="stylesheet" href="./global.css">
+    <center>
+        <section>
+    <h2>Calculator</h2>
+  <input type="text" id="display">
+  <br><br>
+
+  <button onclick="press('1')">1</button>
+  <button onclick="press('2')">2</button>
+  <button onclick="press('3')">3</button>
+  <button onclick="press('+')">+</button>
+  <br/>
+  <button onclick="press('4')">4</button>
+  <button onclick="press('5')">5</button>
+  <button onclick="press('6')">6</button>
+  <button onclick="press('-')">-</button>
+  <br>
+
+  <button onclick="press('7')">7</button>
+  <button onclick="press('8')">8</button>
+  <button onclick="press('9')">9</button>
+  <button onclick="press('*')">*</button>
+  <br>
+
+  <button onclick="press('/')">/</button>
+  <button onclick="press('0')">0</button>
+  <button onclick="calculate()">=</button>
+  <button onclick="clearDisplay()">C</button>
+  <br/>
+  <button onclick="prevDel()">AC</button>
+</section>
+</fieldset>
+  <script>
+    function press(value) {
+      document.getElementById("display").value += value;
+    }
+
+    function calculate() {
+      let result = eval(document.getElementById("display").value);
+      document.getElementById("display").value = result;
+    }
+
+    function prevDel() {
+      document.getElementById("display").value = "";
+    }
+    function clearDisplay() {
+  let current = document.getElementById("display").value;
+  document.getElementById("display").value = current.slice(0, -1);
+}
+  </script>
+</body>
+</html>
